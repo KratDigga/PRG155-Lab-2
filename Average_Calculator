@@ -1,0 +1,76 @@
+/*
+Description:A program that receives 3 numbers from the user and	calculates the average of the values it was given in a funtion called calculateAverage
+Programmer: Hoshua Etienne
+Date: Jan 21st 2020
+Version 2.0
+*/
+
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void explainProg(void);
+void calculateAverage(void);
+
+int main(void) {
+
+	explainProg();
+	calculateAverage();
+}
+
+void explainProg(void) {
+
+	printf("\t\t\n\n\nThis program will receives 3 numbers from You and calculates the average of the values to the 100th decimal place.\nThis will be done in a funtion called calculateAverage\n\n");
+	system("pause");
+	system("cls");
+	return;
+}
+
+void calculateAverage(void) {
+
+	float number[3] = { 0 };
+	float sum = 0;
+	float average = 0;
+	const float numbersBeingCalculated = 3;
+
+	printf("\t\t\tEnter the 1st value: ");
+	scanf("%f", &number[0]);
+
+	printf("\t\t\tEnter the 2nd value: ");
+	scanf("%f", &number[1]);
+
+	printf("\t\t\tEnter the 3rd value: ");
+	scanf("%f", &number[2]);
+	printf("\n");
+
+	sum = +number[0] + number[1] + number[2];
+
+	printf("\t\t\tThe sum of all values entered is: %.2f\n", sum);
+	system("pause");
+	printf("\n");
+
+	average = sum / numbersBeingCalculated;
+
+	printf("\t\t\tThe Average is %.2f\n", average);
+	system("pause");
+	return 0;
+}
+
+Output
+/*
+This program will receives 3 numbers from You and calculates the average of the values to the 100th decimal place.
+This will be done in a funtion called calculateAverage
+
+Press any key to continue . . .
+
+                        Enter the 1st value: 999
+                        Enter the 2nd value: 999
+                        Enter the 3rd value: 999
+
+                        The sum of all values entered is: 2997.00
+Press any key to continue . . .
+
+                        The Average is 999.00
+Press any key to continue . . .
+*/
